@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour
 {
-    public char Letra;
+    public string Letra;
     public GameObject[] Neighbours;
 
 

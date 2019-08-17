@@ -4,51 +4,103 @@ using UnityEngine;
 
 public class MinionsBehaviour : MonoBehaviour
 {
-    private char letra;
-    private int tilespercorridos;
+    public int tilespercorridos;
+    private int numberoftiles;
+    public Rigidbody2D rb;
+    public bool IsRoaming;
+    public float RoamingSpeed;
+    private GameObject CurrentTile;
+    public string Current;
+    public float WaitTime;
+    private int y;
+    public KeyCode theKey = KeyCode.None;
+
+
+    public GameObject[] AllTiles;
+    private Vector2 Target;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        IsRoaming = true;
         tilespercorridos = 0;
+        int x = Random.Range(0, AllTiles.Length);
+        Target = AllTiles[x].GetComponent<Transform>().position;
     }
 
-    void Roam()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Se move aleatoriamente até atingir um tile;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //desliga o collider;
-        //se bater num tile, espere o tempo da animação e mude o transform para aquele tile;
+        if(collision.tag == "Tile")
+        {
+            this.GetComponent<CircleCollider2D>().enabled = false;
+            CurrentTile = collision.gameObject;
+            //Current = CurrentTile.GetComponent<TileBehaviour>().Letra;
+            //tilespercorridos += 1;
+            SobeNoTile();
+        }
     }
 
     void SobeNoTile()
     {
-        //GetComponent collision.TileBehaviour
-        //Sobe no tile;
-        //Espera X tempo;
-        //se tilespercorridos = y, Escavar
-        //else -> MudaDeTile
+        Current = CurrentTile.GetComponent<TileBehaviour>().Letra;
+        tilespercorridos += 1;
+        StartCoroutine("InBetween");
     }
 
-    void MudaDeTile ()
+    void MudaDeTile()
     {
-        //TileBehaviour.randomizar neighbours
+        //Debug.Log("mudando");
+        y = Random.Range(0, CurrentTile.GetComponent<TileBehaviour>().Neighbours.Length);
+        Vector2 newtarget = CurrentTile.GetComponent<TileBehaviour>().Neighbours[y].transform.position;
+
+        CurrentTile = CurrentTile.GetComponent<TileBehaviour>().Neighbours[y];
+
+        //Debug.Log(newtarget);
+        Target = newtarget;
+        IsRoaming = true;
         //ir para proximo neighbour
         //vector2d.moveto
     }
 
-    void Escavar ()
+    IEnumerator InBetween()
+    {
+        yield return new WaitForSeconds(WaitTime);
+       // if (tilespercorridos < 3)
+        {
+            MudaDeTile();
+        }
+       // else Escavar();
+    }
+
+
+    private void Update()
+    {
+        if (IsRoaming)
+            if (Vector3.Distance(transform.position, Target) > 0.001f)
+             {
+                transform.position = Vector2.MoveTowards(transform.position, Target, RoamingSpeed * Time.deltaTime);
+              }
+            else
+             {
+                SobeNoTile();
+                IsRoaming = false;
+             }
+        Morrer();
+    }
+
+    void Escavar()
     {
         //Escavar
         //Se escavar por tempo t, rouba a tecla
     }
 
-    void Morrer ()
+    void Morrer()
     {
         //ded if input = letra;
+        if (Input.GetKey(theKey))
+        {
+            this.gameObject.SetActive(false);
+        }
     }
-
 }
