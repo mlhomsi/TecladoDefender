@@ -31,13 +31,19 @@ public class MinionsBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Tile")
+        if(collision.tag == "Tile" && this.tag == "Starting")
         {
-            this.GetComponent<CircleCollider2D>().enabled = false;
+            this.tag = "Explodable";
+            //this.GetComponent<CircleCollider2D>().enabled = false;
             CurrentTile = collision.gameObject;
             //Current = CurrentTile.GetComponent<TileBehaviour>().Letra;
             //tilespercorridos += 1;
             SobeNoTile();
+        }
+
+        if(collision.tag == "Explodable")
+        {
+
         }
     }
 
