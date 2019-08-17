@@ -16,7 +16,7 @@ public class MinionsBehaviour : MonoBehaviour
 
     public GameObject[] AllTiles;
     private Vector2 Target;
-   // public GameObject Environment;
+ 
 
 
     // Start is called before the first frame update
@@ -27,8 +27,6 @@ public class MinionsBehaviour : MonoBehaviour
         int x = Random.Range(0, AllTiles.Length);
         Target = AllTiles[x].GetComponent<Transform>().position;
 
-
-       // Environment = GameObject.Find("-----Environment-----");
        
     }
 
