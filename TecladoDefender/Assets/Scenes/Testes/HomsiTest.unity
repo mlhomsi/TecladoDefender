@@ -313,7 +313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &339243706
 Transform:
   m_ObjectHideFlags: 0
@@ -367,6 +367,7 @@ MonoBehaviour:
   RoamingSpeed: 2
   Current: 
   WaitTime: 1.2
+  theKey: 0
   AllTiles:
   - {fileID: 778729521}
   - {fileID: 1631810120}
@@ -594,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &451339290
 Transform:
   m_ObjectHideFlags: 0
@@ -648,6 +649,7 @@ MonoBehaviour:
   RoamingSpeed: 2
   Current: 
   WaitTime: 1.2
+  theKey: 0
   AllTiles:
   - {fileID: 778729521}
   - {fileID: 1631810120}
@@ -828,7 +830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &688918313
 Transform:
   m_ObjectHideFlags: 0
@@ -861,6 +863,7 @@ MonoBehaviour:
   RoamingSpeed: 2
   Current: 
   WaitTime: 1.2
+  theKey: 0
   AllTiles:
   - {fileID: 778729521}
   - {fileID: 1631810120}
