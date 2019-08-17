@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour
 {
+    public char Letra;
+    public GameObject[] Neighbours;
+
+
     // Start is called before the first frame update
     void Start()
     {
