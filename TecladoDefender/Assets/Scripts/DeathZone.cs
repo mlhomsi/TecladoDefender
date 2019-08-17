@@ -23,7 +23,7 @@ public class DeathZone : MonoBehaviour
         if(collision.tag == "Explodable")
         {
             KilledMinion = collision.gameObject;
-            KilledMinion.SetActive(false);
+            Destroy(KilledMinion);
         }
     }
 }
