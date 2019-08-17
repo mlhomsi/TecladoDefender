@@ -13,11 +13,10 @@ public class MinionsBehaviour : MonoBehaviour
     public string Current;
     public float WaitTime;
     private int y;
-    public KeyCode theKey = KeyCode.None;
-
 
     public GameObject[] AllTiles;
     private Vector2 Target;
+   // public GameObject Environment;
 
 
     // Start is called before the first frame update
@@ -27,6 +26,10 @@ public class MinionsBehaviour : MonoBehaviour
         tilespercorridos = 0;
         int x = Random.Range(0, AllTiles.Length);
         Target = AllTiles[x].GetComponent<Transform>().position;
+
+
+       // Environment = GameObject.Find("-----Environment-----");
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,18 +58,15 @@ public class MinionsBehaviour : MonoBehaviour
     }
 
     void MudaDeTile()
-    {
-        //Debug.Log("mudando");
+    { 
         y = Random.Range(0, CurrentTile.GetComponent<TileBehaviour>().Neighbours.Length);
         Vector2 newtarget = CurrentTile.GetComponent<TileBehaviour>().Neighbours[y].transform.position;
 
         CurrentTile = CurrentTile.GetComponent<TileBehaviour>().Neighbours[y];
 
-        //Debug.Log(newtarget);
         Target = newtarget;
         IsRoaming = true;
         //ir para proximo neighbour
-        //vector2d.moveto
     }
 
     IEnumerator InBetween()
@@ -92,7 +92,6 @@ public class MinionsBehaviour : MonoBehaviour
                 SobeNoTile();
                 IsRoaming = false;
              }
-        Morrer();
     }
 
     void Escavar()
@@ -101,12 +100,4 @@ public class MinionsBehaviour : MonoBehaviour
         //Se escavar por tempo t, rouba a tecla
     }
 
-    void Morrer()
-    {
-        //ded if input = letra;
-        if (Input.GetKey(theKey))
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
 }

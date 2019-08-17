@@ -118,19 +118,7 @@ MonoBehaviour:
   Current: 
   WaitTime: 1
   theKey: 0
-  AllTiles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  AllTiles: []
 --- !u!50 &5328770821192299761
 Rigidbody2D:
   serializedVersion: 4
