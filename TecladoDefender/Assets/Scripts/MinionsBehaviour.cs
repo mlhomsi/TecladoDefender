@@ -14,7 +14,6 @@ public class MinionsBehaviour : MonoBehaviour
     public float WaitTime;
     private int y;
 
-    public GameObject[] AllTiles;
     private Vector2 Target;
  
 
@@ -22,10 +21,12 @@ public class MinionsBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(rb == null) rb = GetComponent<Rigidbody2D>(); //pega automaticamente rigidbody do minion se o mesmo não estiver setado
+
         IsRoaming = true;
         tilespercorridos = 0;
-        int x = Random.Range(0, AllTiles.Length);
-        Target = AllTiles[x].GetComponent<Transform>().position;
+        int x = Random.Range(0, WaveController.instance.AllTiles.Length);
+        Target = WaveController.instance.AllTiles[x].GetComponent<Transform>().position;
 
        
     }
