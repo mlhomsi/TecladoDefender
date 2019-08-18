@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/00 - Menu.unity
+    guid: 690c635932a774c118bf8ad05df3b231
+  - enabled: 1
     path: Assets/Scenes/Testes/HomsiTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/02 - Creditos.unity
+    guid: 9995ee1b0a629400b9eb61499f7e7f19
   m_configObjects: {}
