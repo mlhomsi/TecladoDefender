@@ -25,7 +25,7 @@ public class MinionsBehaviour : MonoBehaviour
 
         IsRoaming = true;
         tilespercorridos = 0;
-        int x = Random.Range(0, WaveController.instance.AllTiles.Length);
+        int x = Random.Range(0, WaveController.instance.AllTiles.Count);
         Target = WaveController.instance.AllTiles[x].GetComponent<Transform>().position;
 
        
@@ -62,6 +62,21 @@ public class MinionsBehaviour : MonoBehaviour
         Vector2 newtarget = CurrentTile.Neighbours[y].transform.position;
 
         CurrentTile = CurrentTile.Neighbours[y].GetComponent<TileBehaviour>();
+        if(!CurrentTile.gameObject.activeSelf){
+            //Se tile está morto, checa se ainda há tiles vivos
+            if(WaveController.instance.AllTiles.Count > 0){
+                //Vai pra um aleatório
+                int rand = Random.Range(0, WaveController.instance.AllTiles.Count);
+                CurrentTile = WaveController.instance.AllTiles[rand].GetComponent<TileBehaviour>();
+                newtarget = WaveController.instance.AllTiles[rand].transform.position;
+            }
+
+            else{
+                //chama o gameOver
+                Manager.instance.GameOver();
+            }
+
+        }
 
         Target = newtarget;
         IsRoaming = true;

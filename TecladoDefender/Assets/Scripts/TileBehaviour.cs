@@ -30,7 +30,7 @@ public class TileBehaviour : MonoBehaviour
             if (Input.GetKey(vKey))
             {
                 //your code here
-                Debug.Log(vKey);
+                //Debug.Log(vKey);
                 pressedbutton = vKey.ToString();
 
             }
@@ -45,6 +45,9 @@ public class TileBehaviour : MonoBehaviour
             Explosion.SetActive(true);
         } else { Explosion.SetActive(false); }
 
-        if(tempoAtacado >= tempoDeVida) gameObject.SetActive(false); //rip tecla
+        if(tempoAtacado >= tempoDeVida){ 
+            gameObject.SetActive(false); //rip tecla
+            WaveController.instance.AllTiles.Remove(gameObject); //se remove da lista de teclas ativas
+        }
     }
 }

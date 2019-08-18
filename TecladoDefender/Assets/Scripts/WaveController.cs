@@ -16,7 +16,7 @@ public class WaveController : MonoBehaviour
     int curWave;
     public WaveData[] waves;
     [Tooltip("Prefab dos minions")]public GameObject minionsPrefab;
-    [Tooltip("Teclas")]public GameObject[] AllTiles;
+    [Tooltip("Teclas")]public List<GameObject> AllTiles;
     public Text waveText;
 
     void Awake(){
@@ -43,8 +43,8 @@ public class WaveController : MonoBehaviour
     /// </summary>
     void NextWave(){
         curWave++; //Vai pra próxima wave
-        if(curWave >= waves.Length) curWave = 0; //TODO: ir para a tela de vitória
-        StartWave(); //Configura próxima wave
+        if(curWave >= waves.Length) Manager.instance.WinScreen();
+        else StartWave(); //Configura próxima wave
     }
 
     /// <summary>
