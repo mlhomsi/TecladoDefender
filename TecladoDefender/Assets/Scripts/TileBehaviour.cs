@@ -11,6 +11,10 @@ public class TileBehaviour : MonoBehaviour
     public GameObject Explosion;
     //public KeyCode vkey;
 
+    public float tempoDeVida = 10; //quanto tempo o minion precisa escavar pra matar a tecla
+
+    public float tempoAtacado = 0; //quanto de vida os minions tiraram 
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,5 +45,6 @@ public class TileBehaviour : MonoBehaviour
             Explosion.SetActive(true);
         } else { Explosion.SetActive(false); }
 
+        if(tempoAtacado >= tempoDeVida) gameObject.SetActive(false); //rip tecla
     }
 }

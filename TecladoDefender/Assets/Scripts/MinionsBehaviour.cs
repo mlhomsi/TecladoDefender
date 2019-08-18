@@ -9,7 +9,7 @@ public class MinionsBehaviour : MonoBehaviour
     public Rigidbody2D rb;
     public bool IsRoaming;
     public float RoamingSpeed;
-    private GameObject CurrentTile;
+    private TileBehaviour CurrentTile;
     public string Current;
     public float WaitTime;
     private int y;
@@ -37,7 +37,7 @@ public class MinionsBehaviour : MonoBehaviour
         {
             this.tag = "Explodable";
             //this.GetComponent<CircleCollider2D>().enabled = false;
-            CurrentTile = collision.gameObject;
+            CurrentTile = collision.gameObject.GetComponent<TileBehaviour>();
             //Current = CurrentTile.GetComponent<TileBehaviour>().Letra;
             //tilespercorridos += 1;
             SobeNoTile();
@@ -53,15 +53,15 @@ public class MinionsBehaviour : MonoBehaviour
     {
         Current = CurrentTile.GetComponent<TileBehaviour>().Letra;
         tilespercorridos += 1;
-        StartCoroutine("InBetween");
+        StartCoroutine(InBetween());
     }
 
     void MudaDeTile()
     { 
-        y = Random.Range(0, CurrentTile.GetComponent<TileBehaviour>().Neighbours.Length);
-        Vector2 newtarget = CurrentTile.GetComponent<TileBehaviour>().Neighbours[y].transform.position;
+        y = Random.Range(0, CurrentTile.Neighbours.Length);
+        Vector2 newtarget = CurrentTile.Neighbours[y].transform.position;
 
-        CurrentTile = CurrentTile.GetComponent<TileBehaviour>().Neighbours[y];
+        CurrentTile = CurrentTile.Neighbours[y].GetComponent<TileBehaviour>();
 
         Target = newtarget;
         IsRoaming = true;
@@ -71,11 +71,14 @@ public class MinionsBehaviour : MonoBehaviour
     IEnumerator InBetween()
     {
         yield return new WaitForSeconds(WaitTime);
-       // if (tilespercorridos < 3)
+        if (tilespercorridos < 3 || CurrentTile.gameObject.activeSelf == false)
         {
             MudaDeTile();
         }
-       // else Escavar();
+        else{
+            Escavar();
+            StartCoroutine(InBetween()); //reinicia a ação
+        }
     }
 
 
@@ -97,6 +100,8 @@ public class MinionsBehaviour : MonoBehaviour
     {
         //Escavar
         //Se escavar por tempo t, rouba a tecla
+        CurrentTile.tempoAtacado += WaitTime;
+        Debug.Log(gameObject + " escavando " + CurrentTile.gameObject + " (" + CurrentTile.tempoAtacado + "/" + CurrentTile.tempoDeVida + ")");
     }
 
 }

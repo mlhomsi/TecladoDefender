@@ -102,6 +102,8 @@ MonoBehaviour:
   - {fileID: 0}
   pressedbutton: 
   Explosion: {fileID: 4745341585149552220}
+  tempoDeVida: 10
+  tempoAtacado: 0
 --- !u!61 &778729522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -238,3 +240,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69263e6c7a2b847479e5d043d81a5523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KilledMinion: {fileID: 0}
