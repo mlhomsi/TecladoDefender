@@ -18,6 +18,7 @@ public class WaveController : MonoBehaviour
     [Tooltip("Prefab dos minions")]public GameObject minionsPrefab;
     [Tooltip("Teclas")]public List<GameObject> AllTiles;
     public Text waveText;
+    public AudioSource waveSound;
 
     void Awake(){
         if(instance == null) instance = this;
@@ -59,6 +60,9 @@ public class WaveController : MonoBehaviour
             GameObject obj = Instantiate(minionsPrefab, GetRandomStartPos(), Quaternion.identity, transform);
             ConfigureMinion(obj);
         }
+
+        //som
+        waveSound.Play();
 
     }
 
