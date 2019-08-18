@@ -28,6 +28,6 @@ public class SceneManagement : MonoBehaviour
 
     public void Quit()
     {
-        Quit();
+        Application.Quit();
     }
 }
