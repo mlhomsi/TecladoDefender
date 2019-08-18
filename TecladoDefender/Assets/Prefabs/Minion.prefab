@@ -114,11 +114,9 @@ MonoBehaviour:
   tilespercorridos: 0
   rb: {fileID: 5328770821192299761}
   IsRoaming: 0
-  RoamingSpeed: 4
+  RoamingSpeed: 6
   Current: 
-  WaitTime: 1
-  theKey: 0
-  AllTiles: []
+  WaitTime: 0.7
 --- !u!50 &5328770821192299761
 Rigidbody2D:
   serializedVersion: 4

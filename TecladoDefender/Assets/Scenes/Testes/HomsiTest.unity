@@ -320,6 +320,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[6]
       value: 
       objectReference: {fileID: 1847619906}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -523,6 +528,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[7]
       value: 
       objectReference: {fileID: 1847619906}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -658,6 +668,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[5]
       value: 
       objectReference: {fileID: 1847619906}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -776,6 +791,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1671004865}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1057,15 +1077,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - numMinions: 3
+  - numMinions: 4
     RoamingSpeed: 6
-    WaitTime: 1.5
-  - numMinions: 6
-    RoamingSpeed: 6
-    WaitTime: 1.5
-  - numMinions: 20
-    RoamingSpeed: 6
-    WaitTime: 1.5
+    WaitTime: 0.8
+  - numMinions: 7
+    RoamingSpeed: 8
+    WaitTime: 0.8
+  - numMinions: 11
+    RoamingSpeed: 9
+    WaitTime: 0.8
+  - numMinions: 13
+    RoamingSpeed: 12
+    WaitTime: 0.8
+  - numMinions: 17
+    RoamingSpeed: 10
+    WaitTime: 0.6
+  - numMinions: 23
+    RoamingSpeed: 12
+    WaitTime: 0.8
   minionsPrefab: {fileID: 5328770821192299764, guid: b5eac127a4e294f88bb8e030cbd1b6dd,
     type: 3}
   AllTiles:
@@ -1229,6 +1258,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[7]
       value: 
       objectReference: {fileID: 450997361}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1001 &697165125
@@ -1343,6 +1377,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 335254100}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1461,6 +1500,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 335254100}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1668,6 +1712,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[3]
       value: 
       objectReference: {fileID: 60468115}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1 &934664090
@@ -1874,6 +1923,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1519094589}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1 &997425382 stripped
@@ -1979,6 +2033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Letra
       value: P
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
@@ -2094,6 +2153,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1671004865}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2202,6 +2266,11 @@ PrefabInstance:
       propertyPath: Letra
       value: R
       objectReference: {fileID: 0}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1001 &1203502615
@@ -2306,6 +2375,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 575691183}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1 &1226278608 stripped
@@ -2432,6 +2506,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1847619906}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2550,6 +2629,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1402157133}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2794,6 +2878,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[7]
       value: 
       objectReference: {fileID: 368946263}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2914,6 +3003,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1462342284}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1 &1436636332 stripped
@@ -3130,6 +3224,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 335254100}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -3287,6 +3386,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[7]
       value: 
       objectReference: {fileID: 2092011987}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -3447,6 +3551,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[2]
       value: 
       objectReference: {fileID: 335254100}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1 &1671004865 stripped
@@ -3724,6 +3833,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[7]
       value: 
       objectReference: {fileID: 997425382}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -3842,6 +3956,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[4]
       value: 
       objectReference: {fileID: 1402157133}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -4024,6 +4143,11 @@ PrefabInstance:
       propertyPath: Letra
       value: V
       objectReference: {fileID: 0}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1 &2058536726
@@ -4176,6 +4300,11 @@ PrefabInstance:
       propertyPath: Neighbours.Array.data[3]
       value: 
       objectReference: {fileID: 60468115}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 778729522, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -4353,6 +4482,11 @@ PrefabInstance:
       propertyPath: Letra
       value: Z
       objectReference: {fileID: 0}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
 --- !u!1001 &1164306479184412571
@@ -4441,6 +4575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Letra
       value: Q
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164306478741489577, guid: 3b58d47f453cf4684b786460d9c93a6e,
+        type: 3}
+      propertyPath: tempoDeVida
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b58d47f453cf4684b786460d9c93a6e, type: 3}
